@@ -1,28 +1,107 @@
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  background-color: #fff;
-  color: #2f2f37;
-  max-width: 960px;
-  padding: 16px;
+body {
+  font-family: sans-serif;
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
 }
 
-.example .background {
-  height: 240px;
-  // ❗️❗️❗️ The path to images from a SASS file
-  // is always the same as from the css folder.
-  background-image: url('../images/logo.png');
-  background-size: cover;
-  background-position: center;
+ul {
+  padding-left: 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  background-color: blue;
+  padding: 10px 10px;
+}
+
+input {
+  padding: 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+input::placeholder {
+  color: blue;
+}
+
+.gallery {
+  margin: 0 auto;
+  padding: 0 15px;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.photo-card {
+  box-sizing: border-box; /* Додано для врахування padding та border у загальній ширині */
+  width: calc(25% - 20px); /* Ширина картки, враховуючи відступи між ними */
+  padding: 5px;
+  margin: 0 5px 5px 0; /* Відступи між картками */
+  text-align: center;
+  list-style-type: none;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  box-shadow: 1px 10px 12px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 10px 12px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 10px 12px -7px rgba(0, 0, 0, 0.75);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  display: block;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.search-button {
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: yellow;
+  border-radius: 0 5px 5px 0;
+}
+
+.load-more {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: yellow;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  border: 1px solid blue;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
