@@ -26,3 +26,5 @@ class NewApiSearch {
   }
 }
 export { NewApiSearch };
+
+console.log('Hello');
